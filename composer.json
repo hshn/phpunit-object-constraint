@@ -1,0 +1,11 @@
+{
+    "name": "hshn/phpunit-object-constraint",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shota Hoshino",
+            "email": "sht.hshn@gmail.com"
+        }
+    ],
+    "require": {}
+}
