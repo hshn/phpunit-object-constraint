@@ -20,4 +20,13 @@ trait ObjectConstraintSupport
     {
         return new Property($constraint, $property, $propertyAccessor);
     }
+
+    /**
+     * @param $class
+     * @return ObjectConstraintBuilder
+     */
+    static protected function getObjectConstraintBuilder($class)
+    {
+        return new ObjectConstraintBuilderImpl($class);
+    }
 }
