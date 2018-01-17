@@ -40,10 +40,7 @@ public function test1()
 ### 3. Assert any value with the constraint you built
 
 ```php
-public function test1()
-{
-    self::assertThat($value, $constraint);
-}
+self::assertThat($value, $constraint);
 ```
 
 
