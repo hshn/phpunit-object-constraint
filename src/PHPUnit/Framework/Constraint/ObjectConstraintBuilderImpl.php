@@ -33,15 +33,15 @@ class ObjectConstraintBuilderImpl implements ObjectConstraintBuilder
     }
 
     /**
+     * @param string $property
      * @param \PHPUnit_Framework_Constraint $constraint
-     * @param string $name
      * @return ObjectConstraintBuilderImpl
      */
-    public function setPropertyConstraint(\PHPUnit_Framework_Constraint $constraint, string $name)
+    public function addPropertyConstraint(string $property, \PHPUnit_Framework_Constraint $constraint)
     {
         $this->constraint = Assert::logicalAnd(
             $this->constraint,
-            new Property($constraint, $name)
+            new Property($constraint, $property)
         );
 
         return $this;

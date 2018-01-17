@@ -357,6 +357,6 @@ class PropertyConstraintBuilder
      */
     private function registerConstraints()
     {
-        return $this->parent->setPropertyConstraint(call_user_func_array([Assert::class, 'logicalAnd'], $this->constraints), $this->name);
+        return $this->parent->addPropertyConstraint($this->name, call_user_func_array([Assert::class, 'logicalAnd'], $this->constraints));
     }
 }
