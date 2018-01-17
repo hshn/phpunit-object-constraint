@@ -1,4 +1,4 @@
-# phpunit-object-constraint
+# phpunit-object-constraint [![Build Status](https://travis-ci.org/hshn/phpunit-object-constraint.svg?branch=master)](https://travis-ci.org/hshn/phpunit-object-constraint)
 
 PHPUnit helper for explicit object comparison.
 
