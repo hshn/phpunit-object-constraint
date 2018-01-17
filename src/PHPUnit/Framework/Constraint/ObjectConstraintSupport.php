@@ -25,7 +25,7 @@ trait ObjectConstraintSupport
      * @param $class
      * @return ObjectConstraintBuilder
      */
-    static protected function getObjectConstraintBuilder($class)
+    static protected function constraintFor($class)
     {
         return new ObjectConstraintBuilderImpl($class);
     }

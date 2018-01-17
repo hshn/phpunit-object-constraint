@@ -30,33 +30,6 @@ class PropertyTest extends \PHPUnit_Framework_TestCase
         self::assertThat($this, self::property(self::equalTo('bar'), 'wrongProperty'));
     }
 
-    public function testSuccessWithObjectConstraintBuilder()
-    {
-        $constraint = self::getObjectConstraintBuilder(PropertyTest::class)
-            ->property('foo')
-                ->equalTo('bar')
-            ->property('bar')
-                ->equalTo('baz')
-            ->getConstraint();
-
-        self::assertThat($this, $constraint);
-    }
-
-    /**
-     * @expectedException \PHPUnit_Framework_ExpectationFailedException
-     */
-    public function testFailureWithObjectConstraintBuilder()
-    {
-        $constraint = self::getObjectConstraintBuilder(\stdClass::class)
-            ->property('foo')
-                ->equalTo('bar')
-            ->property('bar')
-                ->equalTo('baz')
-            ->getConstraint();
-
-        self::assertThat($this, $constraint);
-    }
-
     /**
      * @return string
      */

@@ -129,12 +129,12 @@ class PropertyConstraintBuilder
     }
 
     /**
-     * @param $classname
+     * @param $className
      * @return PropertyConstraintBuilder
      */
-    public function containsOnlyInstancesOf($classname)
+    public function containsOnlyInstancesOf($className)
     {
-        return $this->is(Assert::containsOnlyInstancesOf($classname));
+        return $this->is(Assert::containsOnlyInstancesOf($className));
     }
 
     /**
